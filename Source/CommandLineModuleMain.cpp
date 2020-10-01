@@ -1204,6 +1204,9 @@ void Menu (AMM::DDSManager<void>* mgr) {
 int main () {
 
    AMM::DDSManager<void>* mgr = new AMM::DDSManager<void>("Config/Config.xml");
+   // std::cout << "Module name: " + mgr->m_moduleName << std::endl;
+   // std::cout << "Part ID: " << mgr->m_participant->getAttributes().rtps.participantID << std::endl;
+   // std::cout << "Dom ID: " << mgr->m_participant->getAttributes().rtps.builtin.domainId <<std::endl;
 
    std::string errmsg;
 
@@ -1274,6 +1277,8 @@ int main () {
    if (mgr->InitializeCommand(errmsg) != 0) {
       std::cout << errmsg << std::endl;
    }
+
+   // std::cout << mgr->m_assessment->m_type->getName() << std::endl;
 
    for (;;) {
       Menu(mgr);

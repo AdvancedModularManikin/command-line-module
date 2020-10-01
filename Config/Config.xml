@@ -4,7 +4,7 @@
       <participant profile_name="amm_participant">
          <rtps>
             <name>Command Line Module</name>
-            <participantID>15</participantID>
+            <participantID>0</participantID>
          </rtps>
       </participant>
    </profiles>
